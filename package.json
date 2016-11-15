@@ -1,0 +1,26 @@
+{
+  "name": "malette",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "rollup -c",
+    "watch": "rollup -c -w",
+    "serve": "python -m SimpleHTTPServer 8080"
+  },
+  "author": "Luke Jackson <lukejacksonn@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-preset-es2015-rollup": "^1.2.0",
+    "postcss-nested": "^1.0.0",
+    "rollup": "^0.36.3",
+    "rollup-plugin-babel": "^2.6.1",
+    "rollup-plugin-commonjs": "^5.0.5",
+    "rollup-plugin-eslint": "^3.0.0",
+    "rollup-plugin-node-resolve": "^2.0.0",
+    "rollup-plugin-postcss": "^0.2.0",
+    "rollup-plugin-uglify": "^1.0.1",
+    "rollup-watch": "^2.5.0"
+  },
+  "dependencies": {
+    "clipboard": "^1.5.15"
+  }
+}

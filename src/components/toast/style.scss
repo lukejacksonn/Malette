@@ -1,0 +1,31 @@
+toast- {
+  position: fixed;
+  top: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: all 300ms;
+  background: #fff;
+  border-radius: .5rem;
+  z-index: 4;
+  span {
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    margin-left: .5rem;
+    margin-right: .25rem;
+  }
+  code {
+    display: inline;
+    margin-right: .5rem;
+  }
+  p {
+    display: flex;
+    align-items: center;
+    padding: .62rem 1rem;
+    font-size: 1rem;
+    color: rgba(0,0,0,0.5);
+  }
+  &:empty {
+    top: -5rem;
+  }
+}

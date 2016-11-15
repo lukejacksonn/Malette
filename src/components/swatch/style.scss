@@ -1,0 +1,90 @@
+swatch- {
+  position: fixed;
+  right: 0;
+  top: 0;
+  display: flex;
+  height: 100vh;
+  width: 360px;
+  flex-direction: column;
+  border: 2rem solid #fff;
+  box-shadow: 0 0 1rem rgba(0,0,0,0.62);
+  z-index: 2;
+  transition: border 500ms, background 300ms;
+
+  &:empty {
+    background-color: #e51c23;
+    border-width: 0;
+  }
+
+  color- {
+    flex: 1 1 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex: .00001;
+    animation: flexGrow 300ms ease forwards;
+
+    *+* { margin-top: .25rem; }
+
+    name- {
+      font-size: 1rem;
+      font-weight: bold;
+      opacity: 0;
+      animation: fadeIn 1000ms ease forwards;
+    }
+
+    hex- {
+      font-size: .618rem;
+      opacity: 0;
+      animation: fadeIn 1000ms ease forwards;
+      &:hover {
+        text-decoration: underline;
+        cursor: pointer;
+      }
+    }
+
+    &[normal-text] { color: rgba(255, 255, 255, 0.7); }
+    &[dark-text] { color: rgba(0, 0, 0, 0.87); }
+    &[dark-strong-text] { color: #000; }
+    &[light-text] { color: rgba(255, 255, 255, 0.87); }
+    &[light-strong-text] { color: #fff; }
+
+    &.remove {
+      flex: 100%;
+      animation: flexShrink 300ms ease forwards;
+
+      name-,
+      hex- {
+        opacity: 1;
+        animation: fadeOut 300ms ease forwards;
+      }
+    }
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeOut {
+  to {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes flexGrow {
+  to {
+    flex: 100%;
+  }
+}
+
+@-webkit-keyframes flexShrink {
+  to {
+    flex: .01;
+    flex: .00001;
+  }
+}

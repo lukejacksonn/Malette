@@ -1,0 +1,25 @@
+swatch-:empty + download- {
+  transform: translate(100%, 100%);
+}
+
+download- {
+  position: fixed;
+  width: 5rem;
+  height: 5rem;
+  bottom: 0;
+  right: 0;
+  z-index: 3;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 350ms;
+  svg {
+    width: 50%;
+    height: 50%;
+    opacity: .38;
+    &:hover {
+      opacity: .62;
+    }
+  }
+}
