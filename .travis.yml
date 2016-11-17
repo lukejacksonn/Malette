@@ -1,0 +1,9 @@
+language: node_js
+node_js:
+- stable
+
+script: bash ./deploy.sh
+env:
+  global:
+  - ENCRYPTION_LABEL: "1b2ba3041f6a"
+  - COMMIT_AUTHOR_EMAIL: "lukejacksonn@gmail.com"
