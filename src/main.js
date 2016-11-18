@@ -9,6 +9,10 @@ import Download from './components/download';
 import Toast from './components/toast';
 import Favicon from './components/favicon';
 
+const host = 'malette.io';
+if ((host == window.location.host) && (window.location.protocol != 'https:'))
+  window.location.protocol = 'https';
+
 const $body = document.body;
 const $head = document.head;
 
