@@ -25,20 +25,11 @@ export const Node = template => json =>
     return $n;
   });
 
-export const Bind = selector => event => callback => nodes =>
-  nodes.map(x =>
+export const Bind = selector => event => callback => xs =>
+  xs.forEach(x =>
     [...x.querySelectorAll(selector)]
     .forEach(y => y.addEventListener(event, callback.bind(x)))
-  ?x:x);
-
-export const Once = selector => event => callback => nodes =>
-  nodes.map(x =>
-    [...x.querySelectorAll(selector)]
-    .forEach(y => y.addEventListener(event, callback.bind(x), { once: true }))
-  ?x:x);
+  ) ? xs:xs;
 
 export const Draw = element => nodes =>
-  nodes.map(x => element.appendChild(x));
-
-export const Guid = () =>
-  ('0000' + (Math.random()*Math.pow(36,4) << 0).toString(36)).slice(-4);
+  nodes.forEach(x => element.appendChild(x));
