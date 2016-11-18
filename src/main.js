@@ -7,9 +7,12 @@ import ColorList from './components/colors';
 import Swatch from './components/swatch';
 import Download from './components/download';
 import Toast from './components/toast';
+import Favicon from './components/favicon';
 
 const $body = document.body;
+const $head = document.head;
 
+$head.appendChild(Favicon());
 $body.appendChild(ColorList());
 $body.appendChild(Swatch());
 $body.appendChild(Download());
