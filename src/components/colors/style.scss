@@ -3,6 +3,10 @@ colors- {
   width: calc(100% - 360px);
   flex-flow: row wrap;
 
+  @media (orientation: portrait) {
+    width: calc(100% - 100px);
+  }
+
   color- {
     flex: 1 1 25%;
     position: relative;

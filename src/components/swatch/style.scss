@@ -11,6 +11,24 @@ swatch- {
   z-index: 2;
   transition: border 500ms, background 300ms;
 
+  @media (orientation: portrait) {
+    width: 300px;
+    transform: translateX(200px);
+    transition: all 300ms;
+    hex-,
+    name- {
+      transition: opacity 300ms;
+      opacity: 0;
+    }
+    &:hover {
+      transform: translateX(0);
+      hex-,
+      name- {
+        opacity: 1;
+      }
+    }
+  }
+
   &:empty {
     background-color: #e51c23;
     border-width: 0;
