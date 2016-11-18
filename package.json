@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "scripts": {
     "build": "rollup -c",
-    "watch": "rollup -c -w",
-    "serve": "python -m SimpleHTTPServer 8080"
+    "static": "cp -a ./static/. ./out/",
+    "start": "npm run static && rollup -c -w",
+    "deploy": "npm run static && NODE_ENV=production rollup -c",
+    "serve": "cd out && python -m SimpleHTTPServer 8080"
   },
   "author": "Luke Jackson <lukejacksonn@gmail.com>",
   "license": "MIT",

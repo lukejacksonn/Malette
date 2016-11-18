@@ -11,9 +11,9 @@ import nested from 'postcss-nested';
 
 export default {
   entry: 'src/main.js',
-  dest: 'build/main.js',
+  dest: 'out/main.js',
   format: 'iife',
-  sourceMap: 'inline',
+  sourceMap: process.env.NODE_ENV === 'production' ? false : 'inline',
   useStrict: false,
   plugins: [
     postcss({
