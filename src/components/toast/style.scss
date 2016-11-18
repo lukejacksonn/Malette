@@ -6,6 +6,7 @@ toast- {
   transition: all 300ms;
   background: #fff;
   border-radius: .5rem;
+  white-space: nowrap;
   z-index: 4;
   span {
     display: inline-block;
