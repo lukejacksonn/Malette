@@ -10,8 +10,13 @@ import Toast from './components/toast';
 import Favicon from './components/favicon';
 
 const host = 'malette.io';
-if ((host == window.location.host) && (window.location.protocol != 'https:'))
+if ((host == window.location.host) && (window.location.protocol != 'https:')) {
   window.location.protocol = 'https';
+}
+
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/sw.js');
+}
 
 const $body = document.body;
 const $head = document.head;
