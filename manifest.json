@@ -1,0 +1,14 @@
+{
+  "dir": "ltr",
+  "lang": "en",
+  "name": "Malette | Color Picker",
+  "scope": "/",
+  "display": "fullscreen",
+  "start_url": "/",
+  "short_name": "Malette",
+  "theme_color": "white",
+  "description": "Material design inspired color picker.",
+  "orientation": "portrait",
+  "background_color": "white",
+  "icons": []
+}
