@@ -12,6 +12,11 @@ colors- {
     position: relative;
     min-width: 10rem;
 
+    // Hack for safari which does not respect flex item min-width
+    @supports (overflow:-webkit-marquee) and (justify-content:inherit) {
+      flex: 1 1 10rem;
+    }
+
     &:before {
       display: block;
       content: "";
