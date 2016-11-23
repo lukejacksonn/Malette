@@ -6,12 +6,13 @@
     "static": "cp -a ./static/. ./out/",
     "start": "npm run static && rollup -c -w",
     "deploy": "npm run static && NODE_ENV=production rollup -c",
-    "serve": "cd out && python -m SimpleHTTPServer 8080"
+    "serve": "node ./node_modules/http-server-spa/server.js out index.html 8080"
   },
   "author": "Luke Jackson <lukejacksonn@gmail.com>",
   "license": "MIT",
   "devDependencies": {
     "babel-preset-es2015-rollup": "^1.2.0",
+    "http-server-spa": "^1.0.2",
     "postcss-nested": "^1.0.0",
     "rollup": "^0.36.3",
     "rollup-plugin-babel": "^2.6.1",
