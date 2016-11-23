@@ -25,5 +25,15 @@
   "dependencies": {
     "clipboard": "^1.5.15",
     "whatwg-fetch": "^2.0.1"
-  }
+  },
+  "description": "A color picker tool for the google material design palette",
+  "main": "src/main.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lukejacksonn/malette.git"
+  },
+  "bugs": {
+    "url": "https://github.com/lukejacksonn/malette/issues"
+  },
+  "homepage": "https://github.com/lukejacksonn/malette#readme"
 }
