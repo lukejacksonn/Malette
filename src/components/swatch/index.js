@@ -3,6 +3,7 @@ import './style.scss';
 
 export default () => {
   const $swatch = document.createElement('swatch-');
+  let touchDownX;
 
   const removeColor = e => {
     $swatch.removeChild(e.target);
@@ -13,6 +14,29 @@ export default () => {
     if (e.target && e.target.nodeName == 'COLOR-') {
       e.target.classList.add('remove');
       e.target.addEventListener('animationend', removeColor);
+    }
+  });
+
+  $swatch.addEventListener('touchstart', (e) => {
+    touchDownX = e.touches[0].clientX;
+  });
+
+  $swatch.addEventListener('touchmove', (e) => {
+    const movement = Math.abs(touchDownX - e.touches[0].clientX);
+    if(movement > 30) {
+      if(touchDownX > e.touches[0].clientX) $swatch.classList.add('open');
+      if(touchDownX < e.touches[0].clientX) $swatch.classList.remove('open');
+    }
+  });
+
+  $swatch.addEventListener('mouseenter', () => {
+    $swatch.classList.add('open');
+  });
+
+  $swatch.addEventListener('mouseleave', (e) => {
+    const $elem = e.toElement || e.relatedTarget;
+    if($elem && $elem.nodeName !== 'DOWNLOAD-') {
+      $swatch.classList.remove('open');
     }
   });
 

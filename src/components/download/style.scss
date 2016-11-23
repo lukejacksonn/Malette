@@ -1,5 +1,5 @@
 @media (orientation: portrait) {
-  swatch-:not(:hover) + download- {
+  swatch-:not(.open) + download- {
     transform: translate(100%, 100%);
   }
 }
