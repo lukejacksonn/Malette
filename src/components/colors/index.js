@@ -12,6 +12,7 @@ const action = {
   picked(e) {
     if (e.target.nodeName !== 'HEX-') {
       Publish('color/picked', [this.data]);
+      ga('send', 'event', 'color', 'picked', `${this.data.base.replace(' ','-')}-${this.data.shade}`);
     }
   },
   hovered() { Publish('color/hovered', [this.data]); },

@@ -66,6 +66,7 @@ const action = {
 
     // Remove the temporary link
     document.body.removeChild(document.body.lastElementChild);
+    ga('send', 'event', 'swatch', 'downloaded');
   }
 };
 
