@@ -15,6 +15,9 @@ export default {
   format: 'iife',
   sourceMap: process.env.NODE_ENV === 'production' ? false : 'inline',
   useStrict: false,
+  moduleContext: {
+    'node_modules/whatwg-fetch/fetch.js': 'window',
+  },
   plugins: [
     postcss({
       plugins: [nested()],

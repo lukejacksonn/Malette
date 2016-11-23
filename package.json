@@ -23,6 +23,7 @@
     "rollup-watch": "^2.5.0"
   },
   "dependencies": {
-    "clipboard": "^1.5.15"
+    "clipboard": "^1.5.15",
+    "whatwg-fetch": "^2.0.1"
   }
 }

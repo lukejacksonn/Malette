@@ -1,4 +1,5 @@
 import './main.scss';
+import 'whatwg-fetch';
 
 import { Publish } from './xs';
 import Clipboard from 'clipboard';
