@@ -88,11 +88,11 @@ swatch- {
 }
 
 @-webkit-keyframes flexGrow {
-  from { flex-basis: 0%; }
-  to { flex-basis: 100%; }
+  from { height: 0%; }
+  to { height: 100%; }
 }
 
 @-webkit-keyframes flexShrink {
-  from { flex-basis: 100%; }
-  to { flex-basis: 0%; }
+  from { height: 100%; }
+  to { height: 0%; }
 }
