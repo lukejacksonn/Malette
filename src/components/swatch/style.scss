@@ -35,28 +35,26 @@ swatch- {
   }
 
   color- {
-    flex: 1 1 100%;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    flex: .00001;
-    animation: flexGrow 300ms ease forwards;
+    flex-grow: 1;
+    flex-shrink: 1;
+    animation: flexGrow 300ms ease both;
 
     *+* { margin-top: .25rem; }
 
     name- {
       font-size: 1rem;
       font-weight: bold;
-      opacity: 0;
-      animation: fadeIn 1000ms ease forwards;
+      animation: fadeIn 1000ms ease both;
     }
 
     hex- {
       font-size: .618rem;
-      opacity: 0;
-      animation: fadeIn 1000ms ease forwards;
+      animation: fadeIn 1000ms ease both;
       &:hover {
         text-decoration: underline;
         cursor: pointer;
@@ -70,39 +68,31 @@ swatch- {
     &[light-strong-text] { color: #fff; }
 
     &.remove {
-      flex: 100%;
-      animation: flexShrink 300ms ease forwards;
-
+      animation: flexShrink 300ms ease both;
       name-,
       hex- {
-        opacity: 1;
-        animation: fadeOut 300ms ease forwards;
+        animation: fadeOut 300ms ease both;
       }
     }
   }
 }
 
 @-webkit-keyframes fadeIn {
-  to {
-    opacity: 1;
-  }
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 @-webkit-keyframes fadeOut {
-  to {
-    opacity: 0;
-  }
+  from { opacity: 1; }
+  to { opacity: 0; }
 }
 
 @-webkit-keyframes flexGrow {
-  to {
-    flex: 100%;
-  }
+  from { flex-basis: 0%; }
+  to { flex-basis: 100%; }
 }
 
 @-webkit-keyframes flexShrink {
-  to {
-    flex: .01;
-    flex: .00001;
-  }
+  from { flex-basis: 100%; }
+  to { flex-basis: 0%; }
 }
