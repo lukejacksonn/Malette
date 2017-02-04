@@ -2,11 +2,11 @@
   "name": "malette",
   "version": "1.0.0",
   "scripts": {
-    "build": "rollup -c",
-    "static": "cp -a ./static/. ./out/",
+    "static": "cp -a ./static/. ./public/",
+    "build": "npm run static && rollup -c",
     "start": "npm run static && rollup -c -w",
     "deploy": "npm run static && NODE_ENV=production rollup -c",
-    "serve": "http-server-spa out index.html 8080"
+    "serve": "http-server-spa public index.html 8080"
   },
   "author": "Luke Jackson <lukejacksonn@gmail.com>",
   "license": "MIT",
