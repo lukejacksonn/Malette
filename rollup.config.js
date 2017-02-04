@@ -11,7 +11,7 @@ import nested from 'postcss-nested';
 
 export default {
   entry: 'src/main.js',
-  dest: 'out/main.js',
+  dest: 'public/main.js',
   format: 'iife',
   sourceMap: process.env.NODE_ENV === 'production' ? false : 'inline',
   useStrict: false,
