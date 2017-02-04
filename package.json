@@ -11,7 +11,7 @@
   "author": "Luke Jackson <lukejacksonn@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "babel-preset-es2015-rollup": "^1.2.0",
+    "babel-preset-es2015-rollup": "^3.0.0",
     "http-server-spa": "^1.2.0",
     "postcss-nested": "^1.0.0",
     "rollup": "^0.36.3",
